@@ -1,53 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+//code for ios application - index.ios.js
+// create a single Component as a starting point of this application
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+//import library for Component
+import React from 'react';
+import { AppRegistry } from 'react-native';
+import Header from './src/components/header';
 
-export default class albums extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
+//create a Component with JSX
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+const App = () => (
+    <Header />
+);
 
-AppRegistry.registerComponent('albums', () => albums);
+//render it on device
+
+AppRegistry.registerComponent('albums', () => App);
