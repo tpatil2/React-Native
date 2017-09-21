@@ -7,7 +7,7 @@ import { AppRegistry, View } from 'react-native';
 import Header from './src/components/header';
 import AlbumList from './src/components/AlbumList';
 
-//create a Component with JSX
+//create a Component with JSX (These are funcational components)
 
 const App = () => (
   <View>
