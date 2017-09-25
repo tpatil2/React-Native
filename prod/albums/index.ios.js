@@ -17,5 +17,4 @@ const App = () => (
 );
 
 //render it on device
-
 AppRegistry.registerComponent('albums', () => App);
