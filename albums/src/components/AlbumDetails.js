@@ -9,18 +9,19 @@ const AlbumDetail = ({ album }) =>{
 
   //multiple refrecences to props abject
 
-  const { title, artist, thumbnail_image} = album;
+  const { title, artist, thumbnail_image } = album;
+  const { headerContentStyle, imageStyle } = styles;
 
   return (
     <Card>
       <CardSection>
         <View >
           <Image
-            style={styles.imageStyle}
+            style={imageStyle}
             source={{ uri: thumbnail_image }}
            />
         </View>
-        <View style={styles.headerContentStyle}>
+        <View style={headerContentStyle}>
           <Text>{title}</Text>
           <Text>{artist}</Text>
         </View>
