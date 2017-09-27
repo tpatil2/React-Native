@@ -19,7 +19,7 @@ For OS-X and iOS
 
 Here's a walkthrough of implemented user stories:
 
-<a href="https://imgflip.com/gif/1wlq4k"><img src="https://i.imgflip.com/1wlq4k.gif" title="made at imgflip.com"/></a>
+<a href="https://imgflip.com/gif/1wlqd6"><img src="https://i.imgflip.com/1wlqd6.gif" title="made at imgflip.com"/></a>
 
 To run your app on iOS:
    cd /Users/Tejas/React-Native/albums
