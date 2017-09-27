@@ -5,11 +5,15 @@ import Card from './Card';
 import CardSection from './CardSection';
 
 
-const AlbumDetail = ({ album }) =>{
+const AlbumDetail = ({ album }) => {
 
   //multiple refrecences to props abject
 
-  const { title, artist, thumbnail_image, image } = album;
+  const { title,
+          artist,
+          thumbnail_image,
+          image } = album;
+
   const { headerContentStyle,
           imageStyle,
           thumbnailContainerStyle,
@@ -54,13 +58,13 @@ const styles = {
     height: 50,
     width: 50
   },
-  thumbnailContainerStyle:{
+  thumbnailContainerStyle: {
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 10,
     marginRight: 10
   },
-  imageContainerStyle:{
+  imageContainerStyle: {
     height: 300,
     flex: 1,
      width: null

@@ -10,7 +10,7 @@ import AlbumList from './src/components/AlbumList';
 //create a Component with JSX (These are funcational components)
 
 const App = () => (
-  <View>
+  <View style={{ flex: 1 }}>
     <Header headerText={'Albums'} />
     <AlbumList />
   </View>
