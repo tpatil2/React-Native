@@ -59,8 +59,8 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-around',
   },
-  headerTextStyle:{
-    fontSize:18
+  headerTextStyle: {
+    fontSize: 18
   },
   imageStyle: {
     height: 50,
@@ -79,7 +79,7 @@ const styles = {
     marginTop: 10,
     marginBottom: 10,
     flex: 1,
-     width: null
+    width: null
   }
 };
 
