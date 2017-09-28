@@ -1,0 +1,12 @@
+
+Firebase authentication steps:
+1. Create firebase account with your gmail
+2. Creare new project for your applicaton
+3. add authentication from given list - Select Email.Password
+4. install firebase npm module in working directory
+	use command - npm install --save firebase
+5. setup firebase inside your application
+6. import firebase in your project
+7. go to firebase web console and click on web setup and copy code provided
+8. use copoed code in your project 
+
