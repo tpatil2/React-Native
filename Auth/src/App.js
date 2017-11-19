@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import firebase from 'firebase';
-import { Header, Button } from './component/common';
+import { Header, Button, Spinner } from './component/common';
 import LoginForm from './component/LoginForm';
 
 class App extends Component {
@@ -9,17 +9,20 @@ class App extends Component {
   state = { loggedIn: false };
 
   componentwillMount() {
-    firebase.initializeApp({
-      apiKey: 'AIzaSyAY39-E7Yq2jJi0SPEnAI5jg1lxiVEB1t8',
-      authDomain: 'auth-d8f0c.firebaseapp.com',
-      databaseURL: 'https://auth-d8f0c.firebaseio.com',
-      projectId: 'auth-d8f0c',
-      storageBucket: 'auth-d8f0c.appspot.com',
-      messagingSenderId: '364908407589'
-    });
+    const config = {
+    apiKey: "AIzaSyAPumu2AapdbLusmnodO4BZi_O1qbZxC3Y",
+    authDomain: "authentication-ab2a6.firebaseapp.com",
+    databaseURL: "https://authentication-ab2a6.firebaseio.com",
+    projectId: "authentication-ab2a6",
+    storageBucket: "authentication-ab2a6.appspot.com",
+    messagingSenderId: "798916811371"
+  };
+
+  firebase.initializeApp(config);
+
 
     firebase.auth().onAuthStateChanged((user) => {
-      if (user){
+      if (user) {
         this.setState({ loggedIn: true });
       } else {
         this.setState({ loggedIn: false });
@@ -31,7 +34,7 @@ class App extends Component {
   renderContent() {
     switch (this.state.loggedIn) {
       case true:
-        return(
+        return (
           <Button onPress={() => firebase.auth().signOut()}>
             Log out
           </Button>
@@ -39,7 +42,7 @@ class App extends Component {
       case false:
         return < LoginForm />;
       default:
-        return <Spinner size="large"/>;
+        return <Spinner size="large" />;
     }
   }
 
