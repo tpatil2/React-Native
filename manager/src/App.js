@@ -6,6 +6,7 @@ import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk'
 import reducers from './reducers';
 import LoginForm from './component/LoginForm';
+import { Header } from './component/common/Header';
 
 class App extends Component {
 
@@ -24,7 +25,8 @@ class App extends Component {
   render() {
     return ( // {} for initil state
       <Provider store={createStore(reducers, {}, applyMiddleware(ReduxThunk))}>
-        <View>
+        <View style={styles.mainViewstyle}>
+        <Header headerText="LoginForm" />
           <LoginForm />
         </View>
       </Provider>
@@ -33,4 +35,10 @@ class App extends Component {
 
 }
 
+const styles = {
+  mainViewstyle: {
+    paddingTop: 30,
+
+  }
+};
 export default App;
