@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import { Card, CardSection, Button } from './common';
-
-
+import { connect } from 'react-redux';
+import { Card, CardSection, Button, Input } from './common';
+import { employeeUpdate } from '../actions';
 
 class EmployeeCreate extends Component {
 
@@ -11,19 +10,21 @@ class EmployeeCreate extends Component {
         <Card>
           <CardSection>
             <Input
-
+            label="name"
+            placeholder="Enter your name"
             />
           </CardSection>
 
           <CardSection>
             <Input
-
+            label="Phone"
+            placeholder="***-***-****"
             />
           </CardSection>
 
           <CardSection>
             <Button
-            
+              Create
             />
           </CardSection>
         </Card>
@@ -31,4 +32,10 @@ class EmployeeCreate extends Component {
   }
 }
 
-export default EmployeeCreate;
+const mapStateToProps = (state) => {
+  
+  const { name, phone, shift } = state.employeeForm;
+  return { name, phone, shift };
+};
+
+export default connect(null, { employeeUpdate})(EmployeeCreate);
