@@ -3,10 +3,10 @@ import { Provider } from 'react-redux';
 import { View } from 'react-native';
 import { createStore, applyMiddleware } from 'redux';
 import firebase from 'firebase';
-import ReduxThunk from 'redux-thunk'
+import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
-import LoginForm from './component/LoginForm';
-import { Header } from './component/common/Header';
+import Router from './Router';
+
 
 class App extends Component {
 
@@ -25,20 +25,10 @@ class App extends Component {
   render() {
     return ( // {} for initil state
       <Provider store={createStore(reducers, {}, applyMiddleware(ReduxThunk))}>
-        <View style={styles.mainViewstyle}>
-        <Header headerText="LoginForm" />
-          <LoginForm />
-        </View>
+          <Router />
       </Provider>
     );
-  }
-
+    }
 }
 
-const styles = {
-  mainViewstyle: {
-    paddingTop: 30,
-
-  }
-};
 export default App;
